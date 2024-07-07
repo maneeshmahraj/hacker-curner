@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 import { MdDeleteForever } from "react-icons/md";
 
-const List = ({data}) => {
+const List = ({data,handleDel}) => {
     
     let ans=data.map((key,i)=>{
         return(
@@ -10,7 +10,7 @@ const List = ({data}) => {
             <tr>
                 <td>{key.pname}</td>
                 <td>{"$"}{key.price}</td>
-                 <td><MdDeleteForever  style={{fontSize:"20px",color:"orangered",cursor:"pointer"}} /></td>
+                 <td><MdDeleteForever onClick={()=>{handleDel(i)}} style={{fontSize:"20px",color:"orangered",cursor:"pointer"}} /></td>
             </tr>
             
             </>
