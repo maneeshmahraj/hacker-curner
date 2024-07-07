@@ -1,0 +1,463 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    
+    font-family: "Raleway",sans-serif;
+    height: 100vh;
+    
+}
+.login-form
+{
+    background: linear-gradient(to right,#7fa7df,#975a3d);
+    height: 100vh;
+}
+.center
+{
+    position: absolute;
+    top:50%;
+    left: 50%;
+     transform: translate(-50%,-50%); 
+}
+.center button
+{
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.popup
+{
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    width: 380px;
+    opacity: 0;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2p 5px 5px rgb(0,0,0,0.15);
+    border-radius: 10px;
+   transition: top 0ms ease-in-out 200ms,
+            opacity 200ms ease-in-out 0ms,
+            transform 200ms ease-in-out 0ms;
+
+}
+.popup
+{
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+    transition: top 0ms ease-in-out 200ms,
+            opacity 200ms ease-in-out 0ms,
+            transform 200ms ease-in-out 0ms;
+        
+}
+.popup .close-btn
+{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: #888;
+    color: #000;
+    text-align: center;
+    border-radius: 15px;
+    line-height: 15px;
+    cursor: pointer;
+}
+.popup .myform h2{
+    text-align: center;
+    color: #c531b1;
+
+    margin: 10px 0px 20px;
+    font-size: 25px;
+}
+.popup .myform .form-element
+{
+    margin: 15px 0px;
+
+}
+.popup .myform .center label
+{
+    font-size: 14px;
+    color: #222;
+    font-weight: bold;
+}
+.popup .myform .form-element input[type="email"],
+.popup .myform .form-element input[type="password"]
+{
+    margin-top:5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    outline: none;
+
+}
+.popup .myform .form-element button
+{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #1f1f1f;
+    border-radius: 20px;
+    color: #f5f5f5;
+    font-weight: 600;
+    cursor: pointer;
+}
+.popup .form .form-element a{
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    font-size: 16px;
+    color: #1a79ca;
+}
+#show-login
+{
+    cursor: pointer;
+}
+
+
+nav{
+    background:lightblue;
+    height: 60px;
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+}
+label.logo
+{
+    color:purple;
+    font-size: 20px;
+    line-height: 60px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float:right;
+    margin-right: 40px;
+}
+nav ul li
+{
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 10px;
+}
+nav ul li a{
+    color: black;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+} 
+a.active
+{
+    background: #1b9bff;
+    transition: .5s;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.checkbtn
+{
+    font-size: 25px;
+    color: white;
+    float:right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check
+{
+    display: none;
+}
+@media (max-width:952px)
+{
+    label.logo{
+        font-size: 25px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 15px;
+
+    }
+}
+@media (max-width:852px){
+    
+    .checkbtn
+    {
+        display: block;
+    }
+    ul
+    {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        margin-left: 10px ;
+        background: #2c3e50;
+        top: 62px;
+        left:-100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li 
+    {
+        display: block;
+        margin: 40px;
+        line-height: 30px;
+    }
+    nav ul li a {
+      font-size: 17px;
+
+    }
+    a:hover,a.active
+    {
+        background: none;
+        color: 30082e6;
+    }
+    #check:checked ~ ul{
+       left:0px;
+    }
+}
+form
+{
+    width: 40%;
+    padding: 10px;
+    margin: auto;
+   
+
+}
+form div
+{
+    margin-top: 40px;
+    font-size: 20px;
+}
+form div input{
+    display: block;
+    margin:0 100px;
+    width: 60%;
+   padding: 8px;
+   border-radius: 10px;
+   outline: none;
+   border: 1px solid rgb(41, 39, 39);
+   
+    
+}
+form div button
+{
+   margin: auto;
+   padding: 10px;
+   background: chartreuse;
+   font-size: 20px;
+   margin-top: 10px;
+   margin-left: 140px;
+   border: 2px solid chartreuse;
+   border-radius: 8px;
+}
+.link
+{
+    font-weight: bold;
+}
+.input-item
+{
+   
+  
+    height: 200px;
+    width: 50%;
+   display: flex;
+  justify-content: center;
+ align-items: center;
+}
+.items-ad 
+{
+    width: 50%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.items-ad input
+{
+    outline: none;
+    border: .7px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+
+}
+.items-add button
+{
+    height: 35px;
+    width: 100px;
+    background-color: purple;
+    border-radius: 5px;
+    border: 1px solid  purple;
+    outline: none;
+    text-align: center;
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 17px;
+
+}
+@media(max-width:652px)
+{
+    .input-item
+    {
+        
+           top: 50%;
+           left: 50%;
+          transform: translate(-50%-50%);
+          display:block;
+          height: 200px;
+          margin-top:100px ;
+        
+         width: 100%;
+    } 
+    .items-ad 
+    {
+        display: block;
+        align-items: center;
+        margin: 10px auto;
+    }
+    .items-ad input
+{
+    outline: none;
+    width: 100%;
+    height: 30px; 
+    margin: 10px;
+    border: .7px solid gray;
+    border-radius: 5px;
+   
+
+}
+.items-add 
+{
+      margin: 80px auto;
+      display: flex;
+      align-items: center;
+     justify-content: center;     
+}
+}
+.show-data
+{
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    justify-content: center;
+   align-items: center;
+   box-shadow: 10px 20px 20px rgb(82, 81, 81);
+   
+}
+.listItem
+{
+    height: 35px;
+    width: 50%;
+    color: white;
+    font-weight: bold;
+    background-color: green;
+    border-radius: 5px;
+    display: flex;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+  
+}
+.tble
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+}
+.tble2
+{
+    width: 50%;
+    display: flex;
+    font-size: 25px;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.tble3
+{
+    width: 50%;
+    display: flex;
+    font-size: 25px;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.tble table
+{
+    width: 50%;
+ margin-left: 10px;
+
+}
+.tble table th
+{
+  color: rgb(228, 119, 77);
+}
+.tble table th,td
+{
+    border-bottom: 1px solid lime;
+}
+.search
+{
+    display: block;
+    width: 50%;
+   
+}
+.tble4
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.tble4 table
+{
+    width: 100%;
+ margin-left: 10px;
+
+}
+.tble4 table th,td
+{
+    border-bottom: 1px solid lime;
+}
+.listsearch
+{
+    width: 100%;
+    margin:10px auto;
+}
+.listItem2
+{
+    height: 35px;
+    width:100%;
+    color: white;
+    font-weight: bold;
+    background-color: green;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
